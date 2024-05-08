@@ -1,0 +1,44 @@
+.inputField {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #4b5563;
+  background: transparent;
+  border-radius: 4px;
+  outline: none;
+  color: inherit;
+  font-size: 1em;
+  transition: ease 0.3s;
+  letter-spacing: 1px;
+}
+.inputTitle {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  color: inherit;
+  text-transform: uppercase;
+  transition: 0.4s;
+  border: 0;
+}
+
+.inputField:valid ~ .inputTitle,
+.inputField:invalid ~ .inputTitle,
+.inputField:focus ~ .inputTitle,
+.inputField:disabled ~ .inputTitle {
+  color: inherit;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.8em;
+  padding: 0 8px 0 8px;
+  background: inherit;
+  border-left: 1px solid #4b5563;
+  border-right: 1px solid #4b5563;
+  letter-spacing: 1px;
+}
+
+.inputField:focus {
+  border: 1px solid #ffffff;
+}
+
+.inputField:disabled {
+  cursor: not-allowed;
+}

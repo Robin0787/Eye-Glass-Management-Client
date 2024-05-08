@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scrollbar-bg: transparent;
+  --scrollbar-color: #ff14f3;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+}
+
+*::selection {
+  background-color: transparent;
+  color: white;
+}
+
+.input {
+  @apply w-full text-[16px] py-2 md:py-3 px-2 rounded-md ring-1 ring-gray-600 border-none outline-none
+  bg-primaryBg  focus:bg-white/70
+  focus:ring-gray-200 placeholder:text-gray-900 placeholder:tracking-wider duration-500 cursor-text selection:text-white selection:bg-black;
+}
+.searchInput {
+  @apply w-full text-[16px] py-2 md:py-3 px-2 outline-none
+  bg-primaryBg focus:bg-black/10
+  focus:ring-gray-200 placeholder:text-gray-900 placeholder:tracking-wider duration-500 cursor-text selection:text-white selection:bg-black;
+}
+
+.btn {
+  @apply w-full py-2 md:py-3 px-2 rounded-md ring-1 ring-gray-600 border-none outline-none
+  bg-primaryBg hover:bg-white/80 tracking-widest
+  hover:ring-gray-200 duration-500;
+}
+
+.sideBarItem {
+  @apply w-full text-base tracking-wider uppercase  lg:py-4 px-4 rounded-lg text-left bg-gray-700 text-gray-100 font-semibold hover:bg-gray-800/80 duration-500;
+}
+.sideBarItemActive {
+  @apply w-full text-base tracking-wider uppercase lg:py-4 px-4 rounded-lg text-left bg-gray-800 text-gray-100 font-semibold;
+}
+
+.footerBtn {
+  @apply block mb-2 w-full text-base tracking-wider uppercase lg:py-4 px-4 rounded-lg text-left bg-gray-800/50 text-gray-100 font-semibold
+  hover:bg-gray-800 duration-500;
+}

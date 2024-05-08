@@ -1,0 +1,29 @@
+.menu {
+  position: relative;
+  padding: 4px 3px;
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 0%;
+  height: 3px;
+  border-radius: 15px;
+  transition: width 0.3s linear;
+}
+.menu:hover.menu::after {
+  width: 100%;
+}
+.menuBg {
+  font-size: 18px;
+  background-color: rgb(17 24 39);
+  color: white;
+  border-radius: 10px;
+  padding: 8px 15px;
+  transition: 0.3s ease;
+}
+.menuBg:hover {
+  background-color: rgb(6, 7, 10);
+}
